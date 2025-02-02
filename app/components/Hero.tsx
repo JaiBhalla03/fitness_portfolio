@@ -10,6 +10,7 @@ import FeatureCard from './utils/FeatureCard';
 import { MdFlightClass} from "react-icons/md";
 import { FaCcDinersClub } from "react-icons/fa6";
 import { FaTable } from "react-icons/fa";
+import { useInView } from 'react-intersection-observer';
 
 const features = [
   "Expert Trainers",
@@ -25,17 +26,35 @@ const features = [
 ];
 
 export default function Hero() {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.3,
+    });
   return (
     <div>
-        <div className='relative text-white h-[110vh]'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }} 
+            className='relative text-white h-[110vh]'>
             <Image src={heroImage} alt='' className='w-full h-full object-cover'/>
-            <div className='absolute bottom-0 w-full'>
+            <motion.div 
+                className='absolute bottom-0 w-full'
+                initial={{opacity: 0, scale: 0}}
+                animate={{opacity: 1, scale: 1}}
+                transition={{duration: 1, delay: 1}}
+            >
                 <div className='font-notable text-white text-[3rem] md:text-[5rem] leading-[4rem] text-center'>STAY FITT NOT STILL</div>
                 <div className='font-cursive text-yellow-300 font-[100] text-2xl md:text-[2rem] text-center md:text-right pr-0 md:pr-32 pb-10 bg-gradient-to-t from-[#101213] to-[#101213]/30 p-4'>
                     Core-Fit Gym Center
                 </div>
-            </div>
-            <div className='absolute left-2 md:left-10 top-1/4 md:top-1/3 flex flex-col items-center gap-2'>
+            </motion.div>
+            <motion.div 
+                initial={{opacity: 0, x: -200}}
+                animate={{opacity: 1, x: 0}}
+                transition={{duration: 1, delay: 1.5}}
+                className='absolute left-2 md:left-10 top-1/4 md:top-1/3 flex flex-col items-center gap-2'
+            >
                  <div className="flex">
                     <Image src={user1} alt="" className="h-12 w-12 rounded-full object-cover border border-blue-950 -ml-4 first:ml-0" />
                     <Image src={user3} alt="" className="h-12 w-12 rounded-full object-cover border border-blue-950 -ml-4" />
@@ -45,13 +64,18 @@ export default function Hero() {
 
                 <div className='font-notable font-bold text-2xl'>220K+</div>
                 <div className='text-sm'>Happy Customer</div>
-            </div>
-            <div className='absolute right-2 md:right-10 top-1/2 flex flex-col items-center gap-2'>
+            </motion.div>
+            <motion.div 
+                className='absolute right-2 md:right-10 top-1/2 flex flex-col items-center gap-2'
+                initial={{opacity: 0, x: 200}}
+                animate={{opacity: 1, x: 0}}
+                transition={{duration: 1, delay: 1.5}}
+            >
                 <div className='font-notable font-bold text-2xl'>250+</div>
                 <div className='text-sm'>Workers</div>
                 <div className='text-sm bg-[#80D20E] py-4 px-8 rounded-full text-blue-950 font-semibold cursor-pointer'>Join Now</div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
         <div className="overflow-hidden bg-[#80D20E] py-4 my-4 whitespace-nowrap">
             <motion.div
                 className="flex space-x-10 text-blue-950 text-2xl uppercase font-[500]"
@@ -73,25 +97,40 @@ export default function Hero() {
     </div>
     {/* features  */}
     <div className='p-2 md:p-12'>
-        <div className='text-white font-notable text-[2rem] md:text-[3.5rem]'>
+        <motion.div 
+            ref={ref}
+            className='text-white font-notable text-[2rem] md:text-[3.5rem]'
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             Features at fitness core-fit
-        </div>
-        <div className='text-sm text-white font-poppins w-full md:w-1/2'>Fitness Core-Fit offers top-notch amenities, cutting-edge equipment, and expert trainers to enhance your workout and achieve your goals.</div>
+        </motion.div>
+        <motion.div 
+            className='text-sm text-white font-poppins w-full md:w-1/2'
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            ref={ref}
+        >Fitness Core-Fit offers top-notch amenities, cutting-edge equipment, and expert trainers to enhance your workout and achieve your goals.</motion.div>
         <div className='flex flex-col md:flex-row w-full justify-between'>
             <FeatureCard
                 icon={<MdFlightClass size={40}/>}
                 heading={'Class'}
                 paragraph='Our amenities ensure you get the most out of your workouts and enjoy a superior gym experience.'
+                ind={1}
             />
             <FeatureCard
                 icon={<FaCcDinersClub size={40}/>}
                 heading={'Club'}
                 paragraph='Our gym features cutting-edge fitness equipment designed to elevate your workouts to the next level.'
+                ind={2}
             />
             <FeatureCard
                 icon={<FaTable size={40}/>}
                 heading={'Timetable'}
                 paragraph='Search for the class that suits your schedule? We offer a variety of time options to fit your needs.'
+                ind={3}
             />
         </div>
     </div>
