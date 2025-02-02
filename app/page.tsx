@@ -9,12 +9,13 @@ import Contact from "./components/Contact";
 export default function Home() {
   return (
     <div className="bg-[#101213] font-poppins">
-      <Navbar/>
-      <Hero/>
-      <Service/>
-      <Goal/>
-      <Classes/>
-      <Contact/>
+      <Navbar />
+      <section id="hero"><Hero /></section>
+      <section id="service"><Service /></section>
+      <section id="goal"><Goal /></section>
+      <section id="classes"><Classes /></section>
+      <section id="contact"><Contact /></section>
     </div>
   );
 }
+
