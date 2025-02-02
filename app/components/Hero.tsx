@@ -72,12 +72,12 @@ export default function Hero() {
             </motion.div>
     </div>
     {/* features  */}
-    <div className='p-12'>
+    <div className='p-2 md:p-12'>
         <div className='text-white font-notable text-[3.5rem]'>
             Features at fitness core-fit
         </div>
         <div className='text-sm text-white font-poppins w-1/2'>Fitness Core-Fit offers top-notch amenities, cutting-edge equipment, and expert trainers to enhance your workout and achieve your goals.</div>
-        <div className='flex w-full justify-between'>
+        <div className='flex flex-col md:flex-row w-full justify-between'>
             <FeatureCard
                 icon={<MdFlightClass size={40}/>}
                 heading={'Class'}

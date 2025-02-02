@@ -12,7 +12,7 @@ interface FeatureCardProps {
 
 export default function FeatureCard({icon, heading, paragraph}: FeatureCardProps) {
   return (
-    <div className='relative group hover:-translate-y-4 transition-all duration-300 mt-20 bg-[#181920] rounded-2xl p-8 w-[32%] text-white flex flex-col gap-4 cursor-pointer'>
+    <div className='relative group hover:-translate-y-4 transition-all duration-300 mt-6 md:mt-20 bg-[#181920] rounded-2xl p-8 w-full md:w-[32%] text-white flex flex-col gap-4 cursor-pointer'>
         <div className='group-hover:border-[#80D20E] group-hover:text-[#80D20E] border border-white p-4 rounded-full w-min transition-all duration-300'>
             {icon}
         </div>
