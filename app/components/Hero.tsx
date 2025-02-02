@@ -30,12 +30,12 @@ export default function Hero() {
         <div className='relative text-white h-[110vh]'>
             <Image src={heroImage} alt='' className='w-full h-full object-cover'/>
             <div className='absolute bottom-0 w-full'>
-                <div className='font-notable text-white text-[5rem] leading-[4rem] text-center'>STAY FITT NOT STILL</div>
-                <div className='font-cursive text-yellow-300 font-[100] text-[2rem] text-right pr-32 pb-10 bg-gradient-to-t from-[#101213] to-[#101213]/30 p-4'>
+                <div className='font-notable text-white text-[3rem] md:text-[5rem] leading-[4rem] text-center'>STAY FITT NOT STILL</div>
+                <div className='font-cursive text-yellow-300 font-[100] text-2xl md:text-[2rem] text-center md:text-right pr-0 md:pr-32 pb-10 bg-gradient-to-t from-[#101213] to-[#101213]/30 p-4'>
                     Core-Fit Gym Center
                 </div>
             </div>
-            <div className='absolute left-10 top-1/3 flex flex-col items-center gap-2'>
+            <div className='absolute left-2 md:left-10 top-1/4 md:top-1/3 flex flex-col items-center gap-2'>
                  <div className="flex">
                     <Image src={user1} alt="" className="h-12 w-12 rounded-full object-cover border border-blue-950 -ml-4 first:ml-0" />
                     <Image src={user3} alt="" className="h-12 w-12 rounded-full object-cover border border-blue-950 -ml-4" />
@@ -46,7 +46,7 @@ export default function Hero() {
                 <div className='font-notable font-bold text-2xl'>220K+</div>
                 <div className='text-sm'>Happy Customer</div>
             </div>
-            <div className='absolute right-10 top-1/2 flex flex-col items-center gap-2'>
+            <div className='absolute right-2 md:right-10 top-1/2 flex flex-col items-center gap-2'>
                 <div className='font-notable font-bold text-2xl'>250+</div>
                 <div className='text-sm'>Workers</div>
                 <div className='text-sm bg-[#80D20E] py-4 px-8 rounded-full text-blue-950 font-semibold cursor-pointer'>Join Now</div>
@@ -73,10 +73,10 @@ export default function Hero() {
     </div>
     {/* features  */}
     <div className='p-2 md:p-12'>
-        <div className='text-white font-notable text-[3.5rem]'>
+        <div className='text-white font-notable text-[2rem] md:text-[3.5rem]'>
             Features at fitness core-fit
         </div>
-        <div className='text-sm text-white font-poppins w-1/2'>Fitness Core-Fit offers top-notch amenities, cutting-edge equipment, and expert trainers to enhance your workout and achieve your goals.</div>
+        <div className='text-sm text-white font-poppins w-full md:w-1/2'>Fitness Core-Fit offers top-notch amenities, cutting-edge equipment, and expert trainers to enhance your workout and achieve your goals.</div>
         <div className='flex flex-col md:flex-row w-full justify-between'>
             <FeatureCard
                 icon={<MdFlightClass size={40}/>}

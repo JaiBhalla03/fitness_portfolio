@@ -13,7 +13,7 @@ export default function Goal() {
                 <FaStar size={30}/>
             </div>
             <div className='font-notable text-xl mt-8'>Success Stories</div>
-            <div className='w-full sm:w-1/2 my-20'>
+            <div className='w-full sm:w-1/2 my-10 md:my-20'>
                 I reached my fitness goals faster than ever with tailored workouts. Wrist notification keep me on track, even during session. Absolutely love this feature and how it enhances my experience
             </div>
             <div className='font-notable text-xl mt-8'>
@@ -29,7 +29,7 @@ export default function Goal() {
             </div>
         </div>
         <div className='w-full md:w-1/2 md:pl-4'>
-            <div className='font-notable text-[3.5rem] leading-[3.5rem]'>Best Training Plan For You</div>
+            <div className='font-notable text-[2rem] md:text-[3.5rem] leading-[3.5rem]'>Best Training Plan For You</div>
             <div className='flex flex-col gap-8 mt-8'>
                 <GoalCard
                     price='$19.99/Month'

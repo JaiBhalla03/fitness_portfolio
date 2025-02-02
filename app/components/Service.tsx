@@ -9,7 +9,7 @@ export default function Service() {
   return (
     <div className='p-2 md:p-12'>
         <div className='flex flex-col md:flex-row items-center w-full justify-between'>
-            <div className='text-white font-notable text-[3.5rem] w-2/3'>
+            <div className='text-white font-notable text-[2rem] md:text-[3.5rem] w-full md:w-2/3'>
                 Explore Our Wide Range of Programs
             </div>
             <div className='text-sm text-white font-poppins w-full md:w-1/3'>
