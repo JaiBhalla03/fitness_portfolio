@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        notable: ["Notable", "serif"],
+        cursive: ["Cedarville Cursive", "serif"]
+      },
     },
   },
   plugins: [],
