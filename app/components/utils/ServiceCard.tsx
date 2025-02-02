@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({img, heading, timing, flag}: ServiceCardProps) {
   return (
-    <div className={`w-[23%] text-white flex flex-col gap-2 ${flag ? 'mt-20' : 'mt-0'}`}>
+    <div className={`w-full md:w-[23%] text-white flex flex-col gap-2 ${flag ? 'mt-4 md:mt-20' : 'mt-4 md:mt-0'}`}>
         <Image src={img} alt='' className='rounded-2xl h-96 w-full object-cover shadow-sm shadow-white'/>
         <div className='font-notable text-xl'>{heading}</div>
         <div className='text-sm'>{timing}</div>

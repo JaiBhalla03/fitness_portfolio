@@ -16,7 +16,7 @@ export default function Service() {
                 Explore our wide range of programs designed to cater to all fitness levels and preferences. From strength training to yoga, each program is crafted to help you meet your specific goals and enhance your overall health and well-being.
             </div>
         </div>
-        <div className='mt-10 flex w-full justify-between'>
+        <div className='mt-4 md:mt-10 flex flex-col md:flex-row w-full justify-between'>
             <ServiceCard
                 img={serviceImage1}
                 heading='Personal Trainer'
